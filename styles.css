@@ -13,9 +13,14 @@ body {
   color: #350202;
 }
 
-section {
+.section1 {
   padding:40px 8%;
 }
+.section2 {
+  padding:40px 8%;
+  background-color:#E6D8C7;
+}
+
 
 h2{
   text-align: center;
@@ -45,7 +50,7 @@ button {
 }
 
 #logoimage{
-  width:40%;
+  width:70%;
   height:auto;
   max-width:300px;
 }
@@ -75,7 +80,7 @@ navlinks a:hover {
   flex: 1;
   display: flex;
   flex-direction:column;
-  background-color:white;
+  background-color:#E6D8C7;
   border-radius: 10px;
   overflow: hidden;
 
@@ -98,10 +103,173 @@ navlinks a:hover {
 .crcontent button {
   margin-top: auto;
   background-color:#350202;
-  color:white;
+  color:#E6D8C7;
 }
 
 .card:hover {
   transform: translateY(-5px);
   box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.pglayout {
+  display:grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 100px 300px 80px;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  gap: 10px;
+}
+
+.gdheader{
+  grid-area:header;
+  background-color:#350202;
+  color:#E6D8C7;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.gdsidebar{
+  grid-area: sidebar;
+  background-color:rgb(230, 164, 175);
+  color:#350202;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.gdmain{
+  grid-area:main;
+  background-color:#350202;
+  color:#E6D8C7;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.gdfooter {
+  grid-area:footer;
+  background-color:rgb(230, 164, 175);
+  color:#350202;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  gap:15px;
+}
+.gritem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gritem img {
+  width: 100%;
+  height: 220px;
+
+  object-fit: cover;
+  display: block;
+
+  transition: transform 0.3s;
+}
+
+.gritem img:hover {
+  transform: scale(1.08);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right:0;
+  background-color: #350202;
+  color: #E6D8C7;
+  padding: 15px;
+  text-align: center;
+  opacity: 0; 
+  transition: opacity 0.3s;
+}
+
+.gritem:hover .caption { 
+  opacity: 1; 
+}
+.portfolio{
+  display: grid;
+  grid-template-rows:auto 1fr auto;
+  min-height: 600px;
+  background-color:#E6D8C7;
+}
+.pfheader{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding:20px 30px;
+  background-color: rgb(230, 164, 175);
+  color:#350202;
+}
+.pflogo{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.pfnav{
+  display: flex;
+  gap: 25px;
+}
+.pfnav a{
+  color:#E6D8C7;
+  text-decoration: none;
+}
+
+.pfmain{
+  display: grid;
+  gap:30px;
+  padding: 30px;
+}
+
+.cats {
+  display: flex; 
+  flex-direction: column; 
+  gap: 20px;
+}
+
+.catscard {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  gap:20px;
+  background-color:#350202;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color:#E6D8C7;
+  padding-left:4px;
+}
+
+.catscard:hover {
+  transform: translateY(- 5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.catscard button {
+  background-color: #E6D8C7; 
+  color: #350202; 
+  white-space: nowrap;
+}
+
+.pfsidebar {
+  padding: 25px; 
+  background-color: #E6D8C7; 
+  border-radius: 8px;
+  background-color:rgb(230, 164, 175);
+}
+
+.pffooter {
+  padding: 20px; 
+  text-align: center; 
+  background-color: #350202; 
+  color: #E6D8C7;
 }
