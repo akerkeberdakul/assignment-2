@@ -50,7 +50,7 @@ button {
 }
 
 #logoimage{
-  width:70%;
+  width:30%;
   height:auto;
   max-width:300px;
 }
@@ -60,12 +60,12 @@ button {
   align-items: center;
 }
 
-navlinks a {
+.navlinks a {
   color:rgb(230, 164, 175);
   text-decoration: underline;
 }
 
-navlinks a:hover {
+.navlinks a:hover {
   color:#350202;
 }
 
@@ -83,13 +83,13 @@ navlinks a:hover {
   background-color:#E6D8C7;
   border-radius: 10px;
   overflow: hidden;
-
+  
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card img {
   width: 100%;
-  height: 200px;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -227,6 +227,7 @@ navlinks a:hover {
 
 .pfmain{
   display: grid;
+  grid-template-columns: 2fr 1fr; 
   gap:30px;
   padding: 30px;
 }
